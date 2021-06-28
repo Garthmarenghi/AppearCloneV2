@@ -1,0 +1,7 @@
+<%= form_tag(users_path, class: "search", method: 'GET', action: "users") do %>
+  <label class="sr-only" for="q"><%= t('search') %></label>
+  <div class="search__row">
+    <%= text_field_tag('q', nil, placeholder: t('search_for_friends')) %>
+    <%= button_tag(t('search'), type:'submit', class: "btn btn--action btn--search", name: nil) %>
+  </div>
+<% end %>

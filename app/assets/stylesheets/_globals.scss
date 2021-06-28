@@ -1,0 +1,34 @@
+.content-wrapper {
+  max-width: 120rem;
+  margin: 1rem 2rem;
+  padding: 0 1em;
+}
+
+.bare-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.pagination__cards {
+  @include tablet {
+    float: left;
+    width: calc(90% - #{$pulse});
+  }
+  @include desktop {
+    float: left;
+    width: calc(90% - #{$pulse});
+    max-width: 75rem;
+  }
+}

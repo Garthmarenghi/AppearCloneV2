@@ -1,0 +1,32 @@
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: $main-color;
+
+  padding: 1.5rem 2rem;
+  letter-spacing: 0.05rem;
+  margin: 0.25rem;
+
+  &:focus {
+    outline: 2px dotted $main-color;
+  }
+}
+
+.btn--default {
+  @include btn-border-drawing($dark-green, $yellow, $dark-color, 4px, top, left);
+}
+.btn--action {
+  @include btn-border-drawing($main-color, $dark-green, $dark-green, 4px, top, left);
+}
+.btn--warning {
+  @include btn-border-drawing($warning-color, $yellow, $main-color, 4px, top, left);
+}
+.btn--unclickable {
+  cursor: default;
+}
+.btn--search {
+  margin: 0;
+}

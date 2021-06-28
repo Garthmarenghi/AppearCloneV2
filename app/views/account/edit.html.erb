@@ -1,0 +1,32 @@
+<%= render(partial: 'bare_header', locals: {title: t('edit_profile')}) %>
+<main>
+  <div class="center-wrapper">
+    <%= form_for(current_user, url: account_path) do |form| %>
+      <% if(current_user.errors.any?) %>
+        <div class="alert">
+          <%= current_user.errors.full_messages.join('<br />').html_safe %>
+        </div>
+      <% end %>
+      <div class="input-group">
+        <%= form.label(:name, class:"input-group__label") %>
+        <%= form.text_field(:name, class:"input-group__field") %>
+      </div>
+      <div class="input-group">
+        <%= form.label(:email, class:"input-group__label") %>
+        <%= form.text_field(:email, class:"input-group__field") %>
+      </div>
+      <div class="input-group">
+        <%= form.label(:password, class:"input-group__label") %>
+        <%= form.password_field(:password, class:"input-group__field") %>
+      </div>
+      <div class="input-group">
+        <%= form.label(:avatar, class: "input-group__label") %>
+        <%= form.file_field(:avatar, class: "input-group__field file-upload") %>
+      </div>
+      <div class="prompt">
+        <%= link_to(t('cancel'), account_home_path, class:"btn btn--warning prompt__cancel") %>
+        <%= form.button(type: "submit", class:"btn btn--action prompt__confirm") %>
+      </div>
+    <% end %>
+  </div>
+</main>

@@ -1,0 +1,13 @@
+<% if checkin.image.blank? %>
+  <% map = "https://maps.googleapis.com/maps/api/staticmap?size=512x512&scale=2&zoom=12&center=" + checkin.latitude.to_s + "," + checkin.longitude.to_s + "&map_id=7654ca73c43a5152&format=png&key=AIzaSyADw6-upuYkJNyMWdstH1GXmef3Ivw4Yz0" %>
+  <%= image_tag(map, alt: checkin.location_name) %>
+<% else %>
+  <%= image_tag(checkin.image, alt: checkin.location_name) %>
+<% end %>
+<div class="card__text">
+  <h3 class="card__title"><%= checkin.location_name %></h3>
+  <p class="card__date"><%= checkin.created_at.strftime("#{checkin.created_at.day.ordinalize} %B %Y") %></p>
+  <div class="card__buttons">
+    <%= link_to(t('delete'), checkin_path(checkin), class:'btn btn--warning', method: :delete, remote: true) %>
+  </div>
+</div>

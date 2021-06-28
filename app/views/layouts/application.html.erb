@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Appear</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyADw6-upuYkJNyMWdstH1GXmef3Ivw4Yz0&map_ids=e900020cdd1104fd' %>
+    <%= yield(:head_tags) %>
+
+  </head>
+
+  <body>
+    <svg style="display: none;" height="0" width="0">
+      <defs>
+        <symbol id="pin">
+          <title>Avatar frame</title>
+          <path d="m 1 5 a 4 4 0 0 1 8 0 a 3 4.5 44 0 1 -2 4 l -2 2 l -2 -2 a 3 4.5 -44 0 1 -2 -4"/>
+        </symbol>
+      </defs>
+    </svg>
+    <svg height="0" width="0">
+      <defs>
+        <clipPath id="avatarPath" clipPathUnits="userSpaceOnUse">
+          <path d="m 10 50 a 40 40 0 0 1 80 0 a 30 45 44 0 1 -20 40 l -20 20 l -20 -20 a 30 45 -44 0 1 -20 -40"/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <%= yield %>
+
+    <%= render(partial: 'footer') %>
+  </body>
+</html>

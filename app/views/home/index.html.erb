@@ -1,0 +1,44 @@
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+    var zoom_level = 12;
+    var my_friends = [];
+    var paths_to_friends = [];
+    var my_location = { lat: <%= @my_location.latitude %>, lng: <%= @my_location.longitude %> };
+    var you_are_here_message = "<h3><%= t('you_are_here') %></h3><br />" + '<%= link_to(t('check_in_elsewhere'), new_checkin_path) %>';
+    <% if current_user.avatar.present? %>
+      var my_avatar = "<%= current_user.avatar %>";
+    <% else %>
+      var my_avatar = null;
+    <% end %>
+
+    <% if @friends.any? %>
+      <% @friends.each do |friend| %>
+        var person = {
+            name: "<%= friend.name.titleize %>",
+            <% if friend.avatar.present? %>
+              avatar: "<%= friend.avatar %>",
+            <% else %>
+              avatar: "<%= image_path('sample_avatar.png') %>",
+            <% end %>
+            lat: <%= friend.current_latitude %>,
+            lng: <%= friend.current_longitude %>,
+          };
+        my_friends.push(person);
+        paths_to_friends.push("<%= user_path(friend) %>");
+      <% end %>
+      zoom_level = <%= set_zoom_level(@distance_to_furthest_friend) %>;
+    <% end %>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      initMap(my_location, my_avatar, my_friends, paths_to_friends, zoom_level, you_are_here_message)
+    });
+  </script>
+<% end %>
+
+<%= render(partial: 'header', locals: { title: t('your_friends') }) %>
+<main>
+  <div class="main-map-container">
+    <div id="map"></div>
+  </div>
+</main>

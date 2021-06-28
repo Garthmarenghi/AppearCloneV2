@@ -1,0 +1,35 @@
+<%= render(partial: "header", locals: {title: t('chat_with') + " " + @user.name.titleize}) %>
+<main>
+  <div class="container">
+    <div class="chat">
+      <div class="messages" id="messages-container">
+        <% if @messages.any? %>
+          <% @messages.each do |message| %>
+            <div class="message">
+              <% if message.body %>
+                <% author = User.find(message.user_id) %>
+                <h5 class="user"><%= author.name.titleize %></h5>
+                <h6>
+                  <% if params[:locale] == "en" %>
+                    <%= time_ago_in_words(message.created_at) + " " + t('ago') %>
+                  <% else %>
+                    <%= t('ago') + " " + time_ago_in_words(message.created_at)%>
+                  <% end %>
+                </h6>
+                <p><%= message.body %></p><br/>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <%= form_for([@conversation, @message], html: { class: "form__plain" } ) do |form| %>
+        <div class="input-group input-group__message">
+          <%= form.label(:body, t('message') + ":") %>
+          <%= form.text_field(:body, class:"input-group__field", id:"message", placeholder:"Enter your message...") %>
+          <%= form.text_field(:user_id, class:"input-group__field", value: current_user.id, type: "hidden") %>
+        </div>
+        <%= form.submit(t('send'), class:"btn btn--default", type:"submit") %>
+      <% end %>
+    </div>
+  </div>
+</main>

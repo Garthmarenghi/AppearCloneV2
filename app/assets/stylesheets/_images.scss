@@ -1,0 +1,9 @@
+.welcome-image {
+  width: 20rem;
+  @include tablet {
+    width: 30rem;
+  }
+  @include desktop {
+    width: 68rem;
+  }
+}

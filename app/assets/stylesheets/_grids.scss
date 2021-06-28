@@ -1,0 +1,59 @@
+.grid-container {
+  display: grid;
+  grid:
+    'leftColumn rightColumn';
+}
+
+.grid-item1 {
+  grid-area: leftColumn;
+  margin: 0 2rem;
+}
+
+.grid-item2 {
+  grid-area: rightColumn;
+  margin: 0 2rem;
+  place-self: start end;
+}
+
+.profile-grid-container {
+  display: grid;
+  grid:
+    'userInfo'
+    'buttons'
+    'rightColumn'
+    'leftColumn';
+}
+
+@include tablet {
+  .profile-grid-container {
+    display: grid;
+    grid:
+      'userInfo buttons'
+      'leftColumn rightColumn';
+  }
+}
+
+.profile-buttons {
+  grid-area: buttons;
+  margin: 2rem 2rem;
+  align-self: center;
+  display: flex;
+
+  & button {
+    margin: 0 0.5rem;
+  }
+}
+
+.profile-user-info {
+  grid-area: userInfo;
+  margin: 4rem 2rem;
+}
+
+.profile-main-left {
+  grid-area: leftColumn;
+  margin: 0 2rem;
+}
+.profile-main-right {
+  grid-area: rightColumn;
+  margin: 0 2rem;
+}

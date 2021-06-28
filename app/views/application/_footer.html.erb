@@ -1,0 +1,16 @@
+<footer>
+  <div class="global-footer">
+    <div class="footer-item">
+      <h6><%= t('select_language') %>: </h6>
+    </div>
+    <div class="footer-item">
+      <ul class="bare-list language_selection">
+        <% I18n.available_locales.each do |locale| %>
+          <li>
+            <%= link_to(locale, url_for(locale: locale)) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</footer>

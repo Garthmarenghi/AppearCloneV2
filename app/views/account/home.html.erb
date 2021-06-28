@@ -1,0 +1,52 @@
+<%= render(partial: 'bare_header', locals: {title: t('your_profile')}) %>
+<main>
+  <div class= "profile-grid-container">
+    <div class="profile-buttons">
+      <%= link_to(t('edit'), account_edit_path, class:"btn btn--default") %>
+      <%= link_to(t('check_in'), new_checkin_path, class:"btn btn--default") %>
+    </div>
+
+    <div class="profile-user-info">
+      <%= render(partial: 'current_user_element', locals: {user: current_user}) %>
+    </div>
+
+    <div class="profile-main-left">
+      <h2><%= t('past_visits') %></h2>
+      <ul class="bare-list">
+        <% @checkins.each do |checkin| %>
+          <li id="checkin-<%= checkin.id %>" class="card">
+            <%= link_to(edit_checkin_path(checkin)) do %>
+              <%= render(partial: 'checkin', locals: {checkin: checkin}) %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <div class="pagination-wrapper pagination__cards">
+        <%= paginate @checkins %>
+      </div>
+    </div>
+
+    <div class="profile-main-right">
+      <% if @friend_requests.any? %>
+        <h2><%= t('pending_requests') %></h2>
+        <ul class="bare-list">
+          <% @friend_requests.each do |request| %>
+            <li>
+              <%= render(partial: 'add_friend_element', locals: {user: request}) %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+      <% if @friends.any? %>
+        <h2><%= t('your_friends') %></h2>
+        <ul class="bare-list">
+          <% @friends.each do |friend| %>
+            <li>
+              <%= render(partial: 'friend_element', locals: {user: friend}) %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</main>

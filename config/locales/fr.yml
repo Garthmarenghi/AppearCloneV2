@@ -1,0 +1,299 @@
+fr:
+  views:
+    pagination:
+      first: 'Premier'
+      last: 'Dernier'
+      previous: "Précédent"
+      next: 'Suivant'
+  accept_friend_request: "Accepter l'invitation"
+  ago: 'Il y a'
+  away: 'de distance'
+  cancel: 'Annuler'
+  chat: 'Discuter'
+  chat_with: 'Parler à'
+  check_in: 'Arriver'
+  check_in_elsewhere: "S'enregistrer ailleurs?"
+  delete: 'Effacer'
+  delete_friend: 'Supprimer Ami·e'
+  edit: 'Editer'
+  edit_checkin: 'Modifier lieu'
+  edit_profile: 'Editer le profil'
+  email: 'Email'
+  friend_request_accepted: "Demande d'ami Acceptée"
+  friend_request_pending: "Demande d'ami en Attente"
+  friends: 'Ami·e·s'
+  has_visited: 'a visité'
+  intro_text: 'Inscrivez-vous maintenant pour retrouver vos ami·e·s et partager des photos.'
+  location: 'Lieu'
+  login: 'Connexion'
+  logout: 'Déconnecter'
+  menu: 'Menu'
+  message: 'Message'
+  password: 'Mot de passe'
+  past_visits: 'Vos Visites Passées'
+  pending_requests: 'Requêtes en Attente'
+  profile: 'Profil'
+  reject_friend_request: 'Rejeter la Demande'
+  search: 'Rechercher'
+  search_for_friends: 'Recherchez vos ami·e·s'
+  searched_for: 'Recherché'
+  send: 'Envoyer'
+  send_request: "Envoyer une demande d'ami"
+  select_language: 'Choisir la langue'
+  signup: "S'inscrire"
+  use_current_location: 'Utiliser Lieu Actuel'
+  welcome: 'Bienvenu·e'
+  you_are_here: ''
+  you_are_here: 'Vous êtes ici'
+  your_friends: 'Vos ami·e·s'
+  your_profile: 'Votre Profil'
+  activerecord:
+    attributes:
+      user:
+        name: 'Nom'
+        email: 'Address email'
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'ne peut pas être vide'
+            email:
+              blank: 'ne peut pas être vide'
+      messages:
+        record_invalid: 'La validation a échoué : %{errors}'
+        restrict_dependent_destroy:
+          has_one: Vous ne pouvez pas supprimer l'enregistrement car un(e) %{record}
+            dépendant(e) existe
+          has_many: Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
+            dépendants existent
+  date:
+    abbr_day_names:
+    - dim
+    - lun
+    - mar
+    - mer
+    - jeu
+    - ven
+    - sam
+    abbr_month_names:
+    -
+    - jan.
+    - fév.
+    - mar.
+    - avr.
+    - mai
+    - juin
+    - juil.
+    - août
+    - sept.
+    - oct.
+    - nov.
+    - déc.
+    day_names:
+    - dimanche
+    - lundi
+    - mardi
+    - mercredi
+    - jeudi
+    - vendredi
+    - samedi
+    formats:
+      default: "%d/%m/%Y"
+      long: "%e %B %Y"
+      short: "%e %b"
+    month_names:
+    -
+    - janvier
+    - février
+    - mars
+    - avril
+    - mai
+    - juin
+    - juillet
+    - août
+    - septembre
+    - octobre
+    - novembre
+    - décembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: environ une heure
+        other: environ %{count} heures
+      about_x_months:
+        one: environ un mois
+        other: environ %{count} mois
+      about_x_years:
+        one: environ un an
+        other: environ %{count} ans
+      almost_x_years:
+        one: presqu'un an
+        other: presque %{count} ans
+      half_a_minute: une demi-minute
+      less_than_x_seconds:
+        zero: moins d'une seconde
+        one: moins d'une seconde
+        other: moins de %{count} secondes
+      less_than_x_minutes:
+        zero: moins d'une minute
+        one: moins d'une minute
+        other: moins de %{count} minutes
+      over_x_years:
+        one: plus d'un an
+        other: plus de %{count} ans
+      x_seconds:
+        one: 1 seconde
+        other: "%{count} secondes"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_days:
+        one: 1 jour
+        other: "%{count} jours"
+      x_months:
+        one: 1 mois
+        other: "%{count} mois"
+      x_years:
+        one: 1 an
+        other: "%{count} ans"
+    prompts:
+      second: Seconde
+      minute: Minute
+      hour: Heure
+      day: Jour
+      month: Mois
+      year: Année
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: doit être accepté(e)
+      blank: doit être rempli(e)
+      confirmation: ne concorde pas avec %{attribute}
+      empty: doit être rempli(e)
+      equal_to: doit être égal à %{count}
+      even: doit être pair
+      exclusion: n'est pas disponible
+      greater_than: doit être supérieur à %{count}
+      greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+      inclusion: n'est pas inclus(e) dans la liste
+      invalid: n'est pas valide
+      less_than: doit être inférieur à %{count}
+      less_than_or_equal_to: doit être inférieur ou égal à %{count}
+      model_invalid: 'Validation échouée : %{errors}'
+      not_a_number: n'est pas un nombre
+      not_an_integer: doit être un nombre entier
+      odd: doit être impair
+      other_than: doit être différent de %{count}
+      present: doit être vide
+      required: doit exister
+      taken: n'est pas disponible
+      too_long:
+        one: est trop long (pas plus d'un caractère)
+        other: est trop long (pas plus de %{count} caractères)
+      too_short:
+        one: est trop court (au moins un caractère)
+        other: est trop court (au moins %{count} caractères)
+      wrong_length:
+        one: ne fait pas la bonne longueur (doit comporter un seul caractère)
+        other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+      carrierwave_processing_error: "n'a pas pu être traité"
+      carrierwave_integrity_error: "n'est pas d'un type de fichier autorisé"
+      carrierwave_download_error: "n'a pas pu être téléchargé"
+      extension_allowlist_error: "Vous n'êtes pas autorisé à importer des fichiers %{extension}, types autorisés: %{allowed_types}"
+      extension_denylist_error: "Vous n'êtes pas autorisé à téléverser des fichiers %{extension}, types interdits: %{prohibed_types}"
+      content_type_allowlist_error: "Vous n'êtes pas autorisé à importer des fichiers %{content_type}, types autorisés: %{allowed_types}"
+      content_type_denylist_error: "Vous n'êtes pas autorisé à importer des fichiers %{content_type}"
+      rmagick_processing_error: "Impossible de manipuler avec rmagick, ce n'est peut-être pas une image?"
+      mini_magick_processing_error: "Échec de la manipulation avec MiniMagick, ce n'est peut-être pas une image? Erreur d'origine: %{e}"
+      min_size_error: "La taille du fichier doit être supérieure à %{min_size}"
+      max_size_error: "La taille du fichier doit être inférieure à %{max_size}"
+    template:
+      body: 'Veuillez vérifier les champs suivants : '
+      header:
+        one: 'Impossible d''enregistrer ce(tte) %{model} : 1 erreur'
+        other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+  helpers:
+    label:
+      user:
+        email: 'Adresse email'
+        password: 'Mot de passe'
+        name: 'Prénom et nom'
+        avatar: 'Télécharger un avatar'
+        submit:
+          update: 'Mettre à jour'
+          create: "S'inscrire"
+      checkin:
+        image: 'Image'
+    select:
+      prompt: Veuillez sélectionner
+    submit:
+      create: Créer un(e) %{model}
+      submit: Enregistrer ce(tte) %{model}
+      update: Modifier ce(tte) %{model}
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: " "
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: milliard
+          million: million
+          quadrillion: million de milliards
+          thousand: millier
+          trillion: billion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: octet
+            other: octets
+          eb: Eo
+          gb: Go
+          kb: ko
+          mb: Mo
+          pb: Po
+          tb: To
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " et "
+      two_words_connector: " et "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%d %B %Y %Hh %Mmin %Ss"
+      long: "%A %d %B %Y %Hh%M"
+      short: "%d %b %Hh%M"
+    pm: pm

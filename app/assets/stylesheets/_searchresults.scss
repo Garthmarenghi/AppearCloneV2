@@ -1,0 +1,55 @@
+.search-result, .friend-element {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  & .friend_request {
+    display: flex;
+  }
+  & .user-name {
+    flex-grow: 1;
+    background-color: $yellow;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+
+    & h3 {
+      margin: 0;
+    }
+  }
+  & .btn {
+    padding: 2.5rem 2rem;
+    margin: 1rem auto;
+  }
+  & .user-distance {
+    flex-grow: 1;
+    background-color: (lighten($main-color, 10%));
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 1;
+    align-self: center;
+
+    & h6 {
+      margin: 0.8rem;
+    }
+  }
+}
+
+.search-result__link, .friend-element__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap:wrap;
+
+  color: $dark-color;
+
+  &:hover {
+    color: $main-color;
+  }
+}

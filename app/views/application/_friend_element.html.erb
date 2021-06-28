@@ -1,0 +1,15 @@
+<div class="friend-element">
+  <%= link_to(user_path(user), class: "friend-element__link") do %>
+    <% if user.avatar.present? %>
+      <%= image_tag(user.avatar, class: "avatar avatar--clipped") %>
+    <% else %>
+      <%= image_tag('sample_avatar.png', class: "avatar avatar--clipped") %>
+    <% end %>
+    <div class="user-name">
+      <h3><%= user.name.titleize %></h3>
+    </div>
+  <% end %>
+  <div class="user-distance">
+    <h6><%= current_user.distance_to(user) %> km <%= t('away') %></h6>
+  </div>
+</div>

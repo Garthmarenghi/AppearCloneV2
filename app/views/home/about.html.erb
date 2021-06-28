@@ -1,0 +1,11 @@
+<%= render(partial: 'bare_header', locals: {title: t('welcome')}) %>
+<main>
+  <div class= "grid-container">
+    <div class="grid-item1">
+      <p><%= t('intro_text') %></p>
+    </div>
+    <div class="grid-item2">
+      <img class="welcome-image" src=<%= image_path('welcome.jpg') %> alt="person sitting at end of pier, looking at a mountain lake"/>
+    </div>
+  </div>
+</main>

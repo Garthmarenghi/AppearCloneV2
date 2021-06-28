@@ -1,0 +1,298 @@
+es:
+  views:
+    pagination:
+      first: 'Primero'
+      last: 'Último'
+      previous: 'Previo'
+      next: 'Próximo'
+  accept_friend_request: 'Aceptar invitacion'
+  ago: 'Hace'
+  away: 'de distancia'
+  cancel: 'Cancelar'
+  chat: 'Charlar'
+  chat_with: 'Charlar con'
+  check_in: 'Chequear'
+  check_in_elsewhere: 'Registrarse en otro lugar?'
+  delete: 'Borrar'
+  delete_friend: 'Eliminar Amigo'
+  edit: 'Editar'
+  edit_checkin: 'Editar Lugar'
+  edit_profile: 'Editar perfil'
+  email: 'Correo electrónico'
+  friend_request_accepted: 'Solicitud de Amistad Aceptada'
+  friend_request_pending: 'Solicitud de Amistad Pendiente'
+  friends: 'Amigos'
+  has_visited: 'ha visitado'
+  intro_text: 'Regístrate ahora para encontrar a tus amigas y compartir fotos.'
+  location: 'Lugar'
+  login: 'Iniciar sesión'
+  logout: 'Cerrar sesión'
+  menu: 'Menú'
+  message: 'Mensaje'
+  password: 'Contraseña'
+  past_visits: 'Tus Visitas Pasadas'
+  pending_requests: 'Solicitudes Pendientes'
+  profile: 'Perfil'
+  reject_friend_request: 'Rechazar Solicitud de Amistad'
+  search: 'Buscar'
+  search_for_friends: 'Busca a tus amigos'
+  searched_for: 'Buscado'
+  send: 'Envia'
+  send_request: 'Envia solicitud de amistad'
+  select_language: 'Seleccionar idioma'
+  signup: 'Inscribirse'
+  use_current_location: 'Usar lugar actual'
+  welcome: 'Bienvenido'
+  you_are_here: 'Tú estás aquí'
+  your_friends: 'Tus Amigos'
+  your_profile: 'Tu perfil'
+  activerecord:
+    attributes:
+      user:
+        name: 'Nombre'
+        email: 'Correo electrónico'
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'no puede estar en blanco'
+            email:
+              blank: 'no puede estar en blanco'
+      messages:
+        record_invalid: 'La validación falló: %{errors}'
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%-d/%-m/%Y"
+      long: "%-d de %B de %Y"
+      short: "%-d de %b"
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: 1 año
+        other: "%{count} años"
+    prompts:
+      second: Segundo
+      minute: Minuto
+      hour: Hora
+      day: Día
+      month: Mes
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor que o igual a %{count}
+      model_invalid: 'La validación falló: %{errors}'
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      other_than: debe ser distinto de %{count}
+      present: debe estar en blanco
+      required: debe existir
+      taken: ya está en uso
+      too_long:
+        one: es demasiado largo (1 carácter máximo)
+        other: es demasiado largo (%{count} caracteres máximo)
+      too_short:
+        one: es demasiado corto (1 carácter mínimo)
+        other: es demasiado corto (%{count} caracteres mínimo)
+      wrong_length:
+        one: no tiene la longitud correcta (1 carácter exactos)
+        other: no tiene la longitud correcta (%{count} caracteres exactos)
+      carrierwave_processing_error: 'no pudo ser procesado'
+      carrierwave_integrity_error: 'no es de un tipo de archivo permitido'
+      carrierwave_download_error: 'no se pudo descargar'
+      extension_allowlist_error: "No puedes subir %{extension} archivos, tipos permitidos: %{allowed_types}"
+      extension_denylist_error: "No puedes subir %{extension} archivos, tipos prohibidos: %{prohibited_types}"
+      content_type_allowlist_error: "No puedes subir %{content_type} archivos, tipos permitidos: %{allowed_types}"
+      content_type_denylist_error: "No puedes subir %{content_type} archivos"
+      rmagick_processing_error: "No se pudo manipular con rmagick, ¿tal vez no sea una imagen?"
+      mini_magick_processing_error: "No se pudo manipular con MiniMagick, ¿tal vez no sea una imagen? Error original: %{e}"
+      min_size_error: "El tamaño del archivo debe ser superior a %{min_size}"
+      max_size_error: "El tamaño del archivo debe ser inferior a %{max_size}"
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    label:
+      user:
+        email: 'Correo electrónico'
+        password: 'Contraseña'
+        name: 'Nombre'
+        avatar: 'Subir avatar'
+        submit:
+          update: 'Actualizar'
+          create: 'Inscribirse'
+      checkin:
+        image: 'Imagen'
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: mil millones
+          million:
+            one: millón
+            other: millones
+          quadrillion: mil billones
+          thousand: mil
+          trillion:
+            one: billón
+            other: billones
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n %"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%A, %-d de %B de %Y %H:%M:%S %z"
+      long: "%-d de %B de %Y %H:%M"
+      short: "%-d de %b %H:%M"
+    pm: pm

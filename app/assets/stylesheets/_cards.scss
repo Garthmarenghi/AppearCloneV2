@@ -1,0 +1,77 @@
+.card {
+  box-shadow: 0px 10px 10px -5px;
+  margin: 0 $pulse $pulse 0;
+  border-radius: 3px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25rem;
+  font-size: 1rem;
+  position: relative;
+  color: $dark-color;
+  padding-left: 0;
+
+  & img {
+    width: 100%;
+    display: block;
+  }
+
+  & iframe {
+    border: 0;
+  }
+
+  @include tablet {
+    float: left;
+    width: calc(90% - #{$pulse});
+  }
+  @include desktop {
+    float: left;
+    width: calc(90% - #{$pulse});
+    max-width: 75rem;
+  }
+}
+
+.card__text {
+  padding: 0.8rem 1.6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(252, 202, 70, 0.8);
+  display: grid;
+  grid:
+    'title title title buttons'
+    'subtitle subtitle subtitle buttons';
+
+  & p {
+   font-size: 1.3rem;
+   margin-bottom: 0;
+ }
+}
+
+.card__title {
+  font-size: 2rem;
+  grid-area: title;
+}
+
+.card__date {
+  grid-area: subtitle;
+
+}
+
+.card__buttons {
+  grid-area: buttons;
+  place-self: center;
+  justify-self: end;
+}
+
+.cards ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  & li {
+    padding: 0;
+  }
+}

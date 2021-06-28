@@ -1,0 +1,41 @@
+//styling for maps has to be built in the google maps api
+//https://developers.google.com/maps/documentation/maps-static/overview
+
+.static-map {
+  height: 25rem;
+  width: 25rem;
+  @include tablet {
+    height: 40rem;
+    width: 40rem;
+  }
+  @include desktop {
+    height: 75rem;
+    width: 75rem;
+  }
+}
+
+.dynamic-map-container {
+  height: 25rem;
+  width: 25rem;
+  @include tablet {
+    height: 40rem;
+    width: 40rem;
+  }
+  @include desktop {
+    height: 75rem;
+    width: 75rem;
+  }
+}
+.main-map-container {
+  height: 50rem;
+  width: 100%;
+  @include tablet {
+    height: 50rem;
+  }
+  @include desktop {
+    height: 62rem;
+  }
+}
+#map {
+  height: 100%;
+}

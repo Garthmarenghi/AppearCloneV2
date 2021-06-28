@@ -1,0 +1,5 @@
+//remove accept and reject buttons
+removeAcceptButton(<%= @invite.user_id %>);
+removeRejectButton(<%= @invite.user_id %>);
+//add a confirmation message for the user
+addFRAcceptedP(<%= @invite.user_id %>, "<%= t('friend_request_accepted') %>");

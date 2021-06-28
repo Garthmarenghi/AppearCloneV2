@@ -1,0 +1,21 @@
+.avatar {
+  stroke: $yellow;
+  fill: none;
+  stroke-width: 0.2;
+
+  &:hover {
+    stroke-width: 0.8;
+  }
+}
+
+.avatar--clipped {
+  -webkit-clip-path: url(#avatarPath);
+  clip-path: url(#avatarPath);
+  width: 100px;
+  height: 110px;
+  object-fit: cover;
+}
+
+.avatar--default {
+  fill: $main-color;
+}

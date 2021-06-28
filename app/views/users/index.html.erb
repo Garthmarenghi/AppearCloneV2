@@ -1,0 +1,24 @@
+<%= render(partial: 'header', locals: { title: t('search') }) %>
+<main>
+  <div class="content-wrapper">
+    <h2><%= t('searched_for') %> "<%= @search_term %>"</h2>
+    <% if(@users.any?) %>
+      <ul class="bare-list">
+        <% @users.each do |user| %>
+          <% unless user == current_user %>
+            <li>
+              <% if current_user.friend_with?(user) %>
+                <%= render(partial: 'friend_element', locals: {user: user}) %>
+              <% else %>
+                <%= render(partial: 'add_friend_element', locals: {user: user}) %>
+              <% end %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="pagination-wrapper">
+        <%= paginate @users %>
+      </div>
+    <% end %>
+  </div>
+</main>

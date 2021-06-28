@@ -1,0 +1,30 @@
+<nav class="dropdown-nav" role="navigation">
+  <ul class="main-menu">
+    <li>
+      <button class="btn btn--action" aria-haspopup="true"><%= t('menu') %></button>
+      <ul class="dropdown" aria-label="submenu">
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to(t('logout'), session_path(1), method: :delete)%>
+          </li>
+          <li class="nav-item">
+            <%= link_to(t('profile'), account_home_path) %>
+          </li>
+          <li class="nav-item">
+            <%= link_to(t('friends'), root_path) %>
+          </li>
+          <li class="nav-item">
+            <%= link_to(t('search'), users_path) %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to(t('signup'), signup_path) %>
+          </li>
+          <li class="nav-item">
+            <%= link_to(t('login'), login_path) %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,30 @@
+<%= render(partial: 'bare_header', locals: {title: @user.name.titleize}) %>
+<main>
+  <div class= "profile-grid-container">
+    <div class="profile-buttons">
+      <%= link_to(t('chat'), conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post", class:"btn btn--default") %>
+      <%= form_tag(invitation_path(@user.find_confirmed_relationship_to(current_user)), remote: true, method: :delete, class: "form__plain form__buttons-only") do %>
+        <%= hidden_field_tag('user_id', @user.id) %>
+        <%= button_tag(t('delete_friend'), class:"btn btn--warning", type: 'submit') %>
+      <% end %>
+    </div>
+
+    <div class="profile-user-info">
+      <%= render(partial: 'current_user_element', locals: {user: @user}) %>
+    </div>
+
+    <div class="profile-main-left">
+      <h2><%= @user.name.titleize %> <%= t('has_visited') %>:</h2>
+      <ul class="bare-list">
+        <% @checkins.each do |checkin| %>
+          <li class="card">
+            <%= render(partial: 'checkin_no_buttons', locals: {checkin: checkin}) %>
+          </li>
+        <% end %>
+      </ul>
+      <div class="pagination-wrapper pagination__cards">
+        <%= paginate @checkins %>
+      </div>
+    </div>
+  </div>
+</main>

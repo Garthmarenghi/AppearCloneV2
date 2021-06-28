@@ -1,0 +1,24 @@
+<%= render(partial: 'bare_header', locals: {title: t('edit_checkin')}) %>
+<main>
+  <div class="center-wrapper">
+    <%= form_for(@checkin) do |form| %>
+      <% if(@checkin.errors.any?) %>
+        <div class="alert">
+          <%= @checkin.errors.full_messages.join('<br />').html_safe %>
+        </div>
+      <% end %>
+      <div class="input-group">
+        <%= form.label(:location_name, t('location'), class:"input-group__label") %>
+        <%= form.text_field(:location_name, class:"input-group__field") %>
+      </div>
+      <div class="input-group">
+        <%= form.label(:image, class: "input-group__label") %>
+        <%= form.file_field(:image, class: "input-group__field file-upload") %>
+      </div>
+      <div class="prompt">
+        <%= link_to(t('cancel'), account_home_path, class:"btn btn--warning prompt__cancel") %>
+        <%= form.button(type: "update", value: "manual", class:"btn btn--action prompt__confirm") %>
+      </div>
+    <% end %>
+  </div>
+</main>

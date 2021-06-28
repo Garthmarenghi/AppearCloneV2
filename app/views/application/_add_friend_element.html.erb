@@ -1,0 +1,29 @@
+<div class="friend-element">
+  <% if user.avatar.present? %>
+    <%= image_tag(user.avatar, class: "avatar avatar--clipped") %>
+  <% else %>
+    <%= image_tag('sample_avatar.png', class: "avatar avatar--clipped") %>
+  <% end %>
+  <div class="user-name">
+    <h3><%= user.name.titleize %></h3>
+  </div>
+  <div class="friend_request" id="add_buttons_for-<%=user.id%>">
+    <% if current_user.waiting_for_reply?(user) %>
+      <p class="btn btn--unclickable"><%= t('friend_request_pending') %></p>
+    <% elsif user.waiting_for_reply?(current_user) %>
+      <%= form_tag(invitation_path(user.find_the_pending_invitation_to(current_user)), remote: true, method: :patch, id: "accept_form-#{user.id}", class: "form__plain form__buttons-only" ) do %>
+        <%= hidden_field_tag('user_id', user.id) %>
+        <%= button_tag(t('accept_friend_request'), class:"btn btn--action", type: 'submit') %>
+      <% end %>
+      <%= form_tag(invitation_path(user.find_the_pending_invitation_to(current_user)), remote: true, method: :delete, id: "reject_form-#{user.id}", class: "form__plain form__buttons-only") do %>
+        <%= hidden_field_tag('user_id', user.id) %>
+        <%= button_tag(t('reject_friend_request'), class:"btn btn--warning", type: 'submit') %>
+      <% end %>
+    <% else %>
+      <%= form_tag(invitations_path, remote: true, id: "add_form-#{user.id}", class: "form__plain form__buttons-only" ) do %>
+        <%= hidden_field_tag('friend_id', user.id) %>
+        <%= button_tag(t('send_request'), class:"btn btn--action", type: 'submit') %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

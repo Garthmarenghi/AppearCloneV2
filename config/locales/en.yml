@@ -1,0 +1,73 @@
+en:
+  helpers:
+    label:
+      user:
+        email: 'Email address'
+        password: 'Password'
+        name: 'Name'
+        avatar: 'Upload avatar'
+        submit:
+          update: 'Update'
+          create: 'Sign up'
+      checkin:
+        image: 'Image'
+  views:
+    pagination:
+      first: 'First'
+      last: 'Last'
+      previous: 'Previous'
+      next: 'Next'
+  errors:
+    messages:
+      carrierwave_processing_error: failed to be processed
+      carrierwave_integrity_error: is not of an allowed file type
+      carrierwave_download_error: could not be downloaded
+      extension_allowlist_error: "You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
+      extension_denylist_error: "You are not allowed to upload %{extension} files, prohibited types: %{prohibited_types}"
+      content_type_allowlist_error: "You are not allowed to upload %{content_type} files, allowed types: %{allowed_types}"
+      content_type_denylist_error: "You are not allowed to upload %{content_type} files"
+      rmagick_processing_error: "Failed to manipulate with rmagick, maybe it is not an image?"
+      mini_magick_processing_error: "Failed to manipulate with MiniMagick, maybe it is not an image? Original Error: %{e}"
+      min_size_error: "File size should be greater than %{min_size}"
+      max_size_error: "File size should be less than %{max_size}"
+  accept_friend_request: 'Accept friend request'
+  ago: 'ago'
+  away: 'away'
+  cancel: 'Cancel'
+  chat: 'Chat'
+  chat_with: 'Chat with'
+  check_in: 'Check in'
+  check_in_elsewhere: 'Check in elsewhere?'
+  delete: 'Delete'
+  delete_friend: 'Delete Friend'
+  edit: 'Edit'
+  edit_checkin: 'Edit Checkin'
+  edit_profile: 'Edit Profile'
+  email: 'Email'
+  friend_request_accepted: 'Friend Request Accepted'
+  friend_request_pending: 'Friend Request Pending'
+  friends: 'Friends'
+  has_visited: 'has visited'
+  intro_text: 'Sign up now to find your friends and share photos.'
+  location: 'Location'
+  login: 'Log in'
+  logout: 'Log out'
+  menu: 'Menu'
+  message: 'Message'
+  password: 'Password'
+  past_visits: 'Your Past Visits'
+  pending_requests: 'Pending Requests'
+  profile: 'Profile'
+  reject_friend_request: 'Reject friend request'
+  search: 'Search'
+  search_for_friends: 'Search for your friends'
+  searched_for: 'Searched for'
+  send: 'Send'
+  send_request: 'Send friend request'
+  select_language: 'Select language'
+  signup: 'Sign up'
+  use_current_location: 'Use Current Location'
+  welcome: 'Welcome'
+  you_are_here: 'You are here'
+  your_friends: 'Your Friends'
+  your_profile: 'Your Profile'
